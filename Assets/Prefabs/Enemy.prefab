@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -803860533562897206}
   - component: {fileID: -6286087466063309610}
   - component: {fileID: 6000151787871812785}
+  - component: {fileID: 2053934811837504181}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -176,3 +177,17 @@ PolygonCollider2D:
       - {x: -0.1447072, y: -0.13865829}
       - {x: 0.13695583, y: -0.16608828}
       - {x: 0.145, y: -0.16}
+--- !u!114 &2053934811837504181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5323960111346999765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d70f26e9e8bd9a4eb39b2391dec090b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  moveSpeed: 15
