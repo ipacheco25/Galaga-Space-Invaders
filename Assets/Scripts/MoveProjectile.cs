@@ -28,5 +28,11 @@ public class MoveProjectile : MonoBehaviour
         {
             col.gameObject.SetActive(false);
         }
+
+        if(col.gameObject.name == "TopWall")
+        {
+            DestroyObject(this.gameObject);
+        }
     }
+    
 }

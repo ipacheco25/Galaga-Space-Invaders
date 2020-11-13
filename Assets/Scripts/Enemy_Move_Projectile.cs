@@ -28,5 +28,10 @@ public class Enemy_Move_Projectile : MonoBehaviour
         {
             col.gameObject.SetActive(false);
         }
+
+        if(col.gameObject.name == "BottomWall")
+        {
+            DestroyObject(this.gameObject);
+        }
     }
 }
