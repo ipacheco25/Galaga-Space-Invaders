@@ -234,25 +234,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -803860533562897206, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -803860533562897206, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
-        type: 3}
-      propertyPath: enemy
+    - target: {fileID: 1446652056, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
+      propertyPath: projectile
       value: 
-      objectReference: {fileID: 1051193066}
+      objectReference: {fileID: 1701283134297951323, guid: ada1443c692889d43a846db131ea1843,
+        type: 3}
     - target: {fileID: 5323960111346999765, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5323960111346999765, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947819223454515954, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
         type: 3}
@@ -309,21 +299,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2053934811837504181, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
---- !u!50 &1051193066 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: -6286087466063309610, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1042083214}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1051193069 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7947819223454515954, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1042083214}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136174205
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,54 +407,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1446652054
+--- !u!1 &1446652054 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1446652054, guid: e00681a50ffdc2f4890b8e4aabd34eb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1042083214}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1446652055}
-  - component: {fileID: 1446652056}
-  m_Layer: 0
-  m_Name: EnemyProjectile
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1446652055
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446652054}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0.0174402, y: -0.19995832, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1051193069}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!114 &1446652056
-MonoBehaviour:
+--- !u!95 &1446652057
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446652054}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6c4ad26cadbdd43be26491a65edf12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserSpawn: {fileID: 0}
-  projectile: {fileID: 4066088340445818898, guid: b084afb1a91101243b5ea25681082645,
-    type: 3}
-  nextFire: 1
-  currentTime: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e9806f55f15c3c489e24cd1d2b7695b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1494086915
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +443,7 @@ GameObject:
   - component: {fileID: 1494086917}
   - component: {fileID: 1494086916}
   m_Layer: 0
-  m_Name: purple
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,6 +815,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7694719337787969096, guid: 562ca76ed5dc2634fad3b394c2126f67,
+        type: 3}
+      propertyPath: nextFire
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694719337787969096, guid: 562ca76ed5dc2634fad3b394c2126f67,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 823448067911358914, guid: 332001ec71de0034d9ae29842987e8f3,
+        type: 3}
     - target: {fileID: 7694719338654754457, guid: 562ca76ed5dc2634fad3b394c2126f67,
         type: 3}
       propertyPath: m_Name

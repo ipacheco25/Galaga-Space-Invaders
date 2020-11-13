@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1446652054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446652055}
+  - component: {fileID: 1446652056}
+  m_Layer: 0
+  m_Name: EnemyProjectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1446652055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446652054}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0.0174402, y: -0.19995832, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7947819223454515954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &1446652056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446652054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6c4ad26cadbdd43be26491a65edf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSpawn: {fileID: 0}
+  projectile: {fileID: 4066088340445818898, guid: b084afb1a91101243b5ea25681082645,
+    type: 3}
+  nextFire: 1
+  currentTime: 0
 --- !u!1 &5323960111346999765
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +61,6 @@ GameObject:
   - component: {fileID: -803860533562897206}
   - component: {fileID: -6286087466063309610}
   - component: {fileID: 6000151787871812785}
-  - component: {fileID: 2053934811837504181}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -31,7 +78,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.054549217, y: 2.5559583, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1446652055}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238d3b61ec1d91c4389abeeef271f4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  moveSpeed: 13
+  enemy: {fileID: -6286087466063309610}
+  moveSpeed: 10
   changeDirection: 0
 --- !u!50 &-6286087466063309610
 Rigidbody2D:
@@ -177,17 +225,3 @@ PolygonCollider2D:
       - {x: -0.1447072, y: -0.13865829}
       - {x: 0.13695583, y: -0.16608828}
       - {x: 0.145, y: -0.16}
---- !u!114 &2053934811837504181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5323960111346999765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d70f26e9e8bd9a4eb39b2391dec090b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  moveSpeed: 15
