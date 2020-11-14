@@ -32,9 +32,7 @@ public class Shoot : MonoBehaviour
         if(Input.GetButton("Fire1") && currentTime > nextFire)
         {
             nextFire += currentTime;
-
             Instantiate(projectile, laserSpawn.position, Quaternion.identity);
-
             nextFire -= currentTime;
             currentTime = 0.0f;
         }

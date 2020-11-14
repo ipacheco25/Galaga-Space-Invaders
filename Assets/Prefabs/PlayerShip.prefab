@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7694719337787969111}
   - component: {fileID: 7694719337787969096}
+  - component: {fileID: 1385329364}
   m_Layer: 8
   m_Name: Laser
   m_TagString: Untagged
@@ -46,8 +47,27 @@ MonoBehaviour:
   laserSpawn: {fileID: 0}
   projectile: {fileID: 823448067911358914, guid: 332001ec71de0034d9ae29842987e8f3,
     type: 3}
-  nextFire: 0.03
+  nextFire: 0.25
   currentTime: 0
+--- !u!95 &1385329364
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694719337787969110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e267e8fa91e8f8e4794c9f323249a8e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7694719338654754457
 GameObject:
   m_ObjectHideFlags: 0

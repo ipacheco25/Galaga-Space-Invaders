@@ -155,6 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1701283134297951297}
+  playership: {fileID: 7694719338654754457, guid: 562ca76ed5dc2634fad3b394c2126f67,
+    type: 3}
+  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
+    type: 3}
   moveSpeed: 10
 --- !u!82 &8867191499854041806
 AudioSource:

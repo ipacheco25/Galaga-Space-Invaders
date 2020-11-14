@@ -9,10 +9,7 @@ public class MoveProjectile : MonoBehaviour
     public GameObject explosion;
     GameObject clone;
     
-
     public float moveSpeed = 20.0f;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +32,7 @@ public class MoveProjectile : MonoBehaviour
         {
             
             Destroy(col.gameObject);
-
             clone = Instantiate(explosion, gameObject.transform.position,gameObject.transform.rotation);
-            
             Destroy(clone,1);
             
         }
@@ -45,7 +40,6 @@ public class MoveProjectile : MonoBehaviour
         if(col.gameObject.name == "TopWall")
         {
             Destroy(gameObject);
-           
         }
     }
         
