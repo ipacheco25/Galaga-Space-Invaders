@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
 
     public bool changeDirection = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,4 +42,5 @@ public class Enemy : MonoBehaviour
             changeDirection = false;
         }
     }
+    
 }

@@ -26,12 +26,14 @@ public class Enemy_Move_Projectile : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            Debug.Log("Hit " + col.gameObject.name + "! ");
             col.gameObject.SetActive(false);
         }
 
         if(col.gameObject.name == "BottomWall")
         {
-            DestroyObject(this.gameObject);
+            Debug.Log("Hit " + col.gameObject.name + "! ");
+            Destroy(gameObject);
         }
     }
 }
