@@ -124,7 +124,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &3081769888168162005
 CapsuleCollider2D:
@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 9184357036854443651}
-  enemy: {fileID: 5323960111346999765, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
-  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
-    type: 3}
+  enemy: {fileID: -803860533562897206, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
+  impact: {fileID: 2888616452715893849, guid: 4c3408c231483f7449c6199c4f0646a7, type: 3}
   moveSpeed: 10
+  damage: 40
 --- !u!82 &6438299548317113920
 AudioSource:
   m_ObjectHideFlags: 0

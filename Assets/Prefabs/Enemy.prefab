@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446652055}
   - component: {fileID: 1446652056}
+  - component: {fileID: 1446652057}
   m_Layer: 0
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -44,10 +45,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpawn: {fileID: 0}
-  projectile: {fileID: 4066088340445818898, guid: b084afb1a91101243b5ea25681082645,
+  projectile: {fileID: 1701283134297951323, guid: ada1443c692889d43a846db131ea1843,
     type: 3}
   nextFire: 1
   currentTime: 0
+--- !u!95 &1446652057
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446652054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e9806f55f15c3c489e24cd1d2b7695b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5323960111346999765
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +78,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7947819223454515954}
   - component: {fileID: 3185306936738907858}
-  - component: {fileID: 501399527064352722}
   - component: {fileID: -6286087466063309610}
   - component: {fileID: 6000151787871812785}
   - component: {fileID: -803860533562897206}
@@ -134,25 +153,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &501399527064352722
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5323960111346999765}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &-6286087466063309610
 Rigidbody2D:
   serializedVersion: 4
@@ -172,7 +172,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 6
 --- !u!60 &6000151787871812785
 PolygonCollider2D:
@@ -242,6 +242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238d3b61ec1d91c4389abeeef271f4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: -6286087466063309610}
-  moveSpeed: 10
+  enemy_rb: {fileID: -6286087466063309610}
+  moveSpeed: 3
+  health: 100
+  enemy: {fileID: 5323960111346999765}
+  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
+    type: 3}
   changeDirection: 0

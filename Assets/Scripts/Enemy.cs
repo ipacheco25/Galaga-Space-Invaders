@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Rigidbody2D enemy;
+    public Rigidbody2D enemy_rb;
     public float moveSpeed = 15.0f;
+    public int health = 100;
+
+    public GameObject enemy;
+    public GameObject explosion;
+    private GameObject explosion_clone;
+    private GameObject enemy_clone;
+
+    
 
     public bool changeDirection = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemy = this.gameObject.GetComponent<Rigidbody2D>();
+        enemy_rb = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,9 +32,9 @@ public class Enemy : MonoBehaviour
     public void moveEnemy()
     {
         if (changeDirection == true){
-            enemy.velocity = new Vector2(1,0) * -1 * moveSpeed;
+            enemy_rb.velocity = new Vector2(1,0) * -1 * moveSpeed;
         } else if (changeDirection == false){
-            enemy.velocity = new Vector2(1,0) * moveSpeed;
+            enemy_rb.velocity = new Vector2(1,0) * moveSpeed;
         } 
     }
 
@@ -42,5 +50,27 @@ public class Enemy : MonoBehaviour
             changeDirection = false;
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("TakeDamage()");
+        health -= damage;
+
+        if(health <= 0)
+        {
+            Die();
+        }
+        
+    }
+
+    void Die()
+    {
+        Debug.Log("Called Die()");
+        //enemy_clone = Instantiate(enemy, gameObject.transform.position,gameObject.transform.rotation);
+        explosion_clone = Instantiate(explosion, GameObject.FindGameObjectWithTag("Enemy").transform.position,GameObject.FindGameObjectWithTag("Enemy").transform.rotation);
+        Destroy(GameObject.FindGameObjectWithTag("Enemy")); 
+        Destroy(explosion_clone,1);  
+    }
     
 }
+

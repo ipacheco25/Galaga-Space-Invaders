@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 7694719338654754458}
   - component: {fileID: 7694719338654754462}
   m_Layer: 8
-  m_Name: PlayerShip
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 2
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7694719338654754459
 MonoBehaviour:
@@ -165,8 +165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef34a5595de9343a0e40bdfbe4d848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   moveSpeed: 7
   rb: {fileID: 7694719338654754458}
+  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
+    type: 3}
 --- !u!50 &7694719338654754458
 Rigidbody2D:
   serializedVersion: 4
@@ -186,7 +189,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7694719338654754462
 BoxCollider2D:
