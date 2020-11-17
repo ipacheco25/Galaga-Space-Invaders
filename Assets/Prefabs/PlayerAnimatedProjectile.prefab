@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2882450679550304838}
   - component: {fileID: 2882450679550304841}
   - component: {fileID: -8805698275066293181}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerAnimatedProjectile
   m_TagString: Laser
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2882450679550304840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5439954, y: -0.94373107, z: -7.8581877}
+  m_LocalPosition: {x: -5.5439954, y: -0.94373107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -155,10 +155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 2882450679550304839}
-  enemy: {fileID: 5323960111346999765, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
-  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
-    type: 3}
+  enemy: {fileID: -803860533562897206, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
+  enemy2: {fileID: -893273522148093962, guid: db76deec80d53c043bc6e6ffb8200f6a, type: 3}
+  impact: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58, type: 3}
   moveSpeed: 20
+  damage: 50
 --- !u!82 &-8805698275066293181
 AudioSource:
   m_ObjectHideFlags: 0

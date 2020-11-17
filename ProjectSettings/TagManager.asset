@@ -8,6 +8,9 @@ TagManager:
   - LeftWall
   - RightWall
   - Laser
+  - Enemy2
+  - EnemyProjectile
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Enemy
   - PlayerProjectile
   - EnemyProjectile
-  - 
+  - Enemy2
   - 
   - 
   - 

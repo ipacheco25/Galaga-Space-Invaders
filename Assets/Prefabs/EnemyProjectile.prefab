@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2680746503956320211}
   m_Layer: 11
   m_Name: EnemyProjectile
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,11 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: -1274033913761642943}
-  playership: {fileID: 7694719338654754457, guid: 562ca76ed5dc2634fad3b394c2126f67,
-    type: 3}
-  explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,
-    type: 3}
   enemy_impact: {fileID: 334767125982915586, guid: 73304ae815bcb1344ba8e8f030335462,
     type: 3}
+  player: {fileID: 7694719338654754459, guid: 562ca76ed5dc2634fad3b394c2126f67, type: 3}
   damage: 10
   moveSpeed: 15

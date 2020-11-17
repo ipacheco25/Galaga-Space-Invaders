@@ -156,9 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 9184357036854443651}
   enemy: {fileID: -803860533562897206, guid: e00681a50ffdc2f4890b8e4aabd34eb8, type: 3}
+  enemy2: {fileID: -893273522148093962, guid: db76deec80d53c043bc6e6ffb8200f6a, type: 3}
   impact: {fileID: 2888616452715893849, guid: 4c3408c231483f7449c6199c4f0646a7, type: 3}
-  moveSpeed: 10
-  damage: 40
+  moveSpeed: 20
+  damage: 50
 --- !u!82 &6438299548317113920
 AudioSource:
   m_ObjectHideFlags: 0

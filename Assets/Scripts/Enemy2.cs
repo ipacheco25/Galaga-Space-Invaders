@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
     public Rigidbody2D enemy_rb;
     public float moveSpeed = 15.0f;
@@ -49,7 +49,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("Hit the left wall!");
             changeDirection = false;
         }
-        
     }
 
     public void TakeDamage(int damage)
@@ -68,10 +67,9 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Called Die()");
         //enemy_clone = Instantiate(enemy, gameObject.transform.position,gameObject.transform.rotation);
-        explosion_clone = Instantiate(explosion,gameObject.transform.position,gameObject.transform.rotation);
+        explosion_clone = Instantiate(explosion, gameObject.transform.position,gameObject.transform.rotation);
         Destroy(gameObject);
         Destroy(explosion_clone,1);  
     }
     
 }
-
