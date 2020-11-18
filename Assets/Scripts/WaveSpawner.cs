@@ -21,6 +21,8 @@ public class WaveSpawner : MonoBehaviour
     public Animator animator;
     public Text waveName;
     public Button nextLevel;
+    public Button nextButton;
+    public int numScene;
 
     private Wave currentWave;
     private int currentWaveIndex;
@@ -43,6 +45,15 @@ public class WaveSpawner : MonoBehaviour
         SpawnWave();
         
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] totatlPlayers = GameObject.FindGameObjectsWithTag("Player");
+
+
+        if(totatlPlayers.Length == 0)
+        {
+            animator.SetTrigger("YouLost");
+            nextButton.gameObject.SetActive(true);
+        }
+
         if(totalEnemies.Length == 0){
             
             if(currentWaveIndex + 1 != waves.Length)
@@ -91,7 +102,22 @@ public class WaveSpawner : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Clicked Next Level Button!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + numScene);
+    }
+
+    public void LostGame(){
+        animator.SetTrigger("isDead");
+        nextButton.gameObject.SetActive(true);
+
+    }
+
+    public void LoadCredits() {
+        SceneManager.LoadScene(2);
+    }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

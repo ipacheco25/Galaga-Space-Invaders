@@ -27,9 +27,6 @@ public class MoveProjectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        
-        
-
         if(col.gameObject.tag.Equals("Enemy") && col.gameObject.GetComponent<Enemy>() != null)
         {
             Debug.Log(col + " hit " + col.gameObject.GetComponent<Enemy>() + "! ");

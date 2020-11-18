@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_rb: {fileID: -6286087466063309610}
-  moveSpeed: 3
+  moveSpeed: 4
   health: 100
   enemy: {fileID: 5323960111346999765}
   explosion: {fileID: 3459023070981680741, guid: ab9fffb693f922a47b9fbd18ea81cf58,

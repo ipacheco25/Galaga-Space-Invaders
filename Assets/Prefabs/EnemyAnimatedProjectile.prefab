@@ -157,7 +157,7 @@ MonoBehaviour:
   projectile: {fileID: 1701283134297951297}
   enemy_impact: {fileID: 334767125982915586, guid: 73304ae815bcb1344ba8e8f030335462,
     type: 3}
-  player: {fileID: 7694719338654754459, guid: 562ca76ed5dc2634fad3b394c2126f67, type: 3}
+  player: {fileID: 7723964492245137578, guid: 562ca76ed5dc2634fad3b394c2126f67, type: 3}
   damage: 10
   moveSpeed: 10
 --- !u!82 &8867191499854041806

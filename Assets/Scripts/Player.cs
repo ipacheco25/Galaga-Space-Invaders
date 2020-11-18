@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -31,9 +32,8 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("TakeDamage()");
+        Debug.Log("Player taking damage");
         health -= damage;
-
         if(health <= 0)
         {
             Die();
@@ -47,7 +47,9 @@ public class Player : MonoBehaviour
         //enemy_clone = Instantiate(enemy, gameObject.transform.position,gameObject.transform.rotation);
         explosion_clone = Instantiate(explosion, GameObject.FindGameObjectWithTag("Player").transform.position,GameObject.FindGameObjectWithTag("Player").transform.rotation);
         Destroy(GameObject.FindGameObjectWithTag("Player")); 
-        Destroy(explosion_clone,1);  
+        Destroy(explosion_clone,1);
     }
+
+    
 
 }
