@@ -70,6 +70,11 @@ public class WaveSpawner : MonoBehaviour
                 animator.SetTrigger("LevelComplete");
                 nextLevel.gameObject.SetActive(true);
 
+                if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+                {
+                    animator.SetTrigger("YouWon");
+                }
+
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Debug.Log("Level Finished");
 

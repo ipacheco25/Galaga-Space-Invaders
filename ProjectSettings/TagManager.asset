@@ -12,6 +12,7 @@ TagManager:
   - EnemyProjectile
   - Button
   - health
+  - audio
   layers:
   - Default
   - TransparentFX

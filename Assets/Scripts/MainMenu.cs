@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Play Game!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 
     public void Tutorial()
@@ -25,6 +25,21 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Credits!");
         SceneManager.LoadScene(2);
         
+    }
+
+    public void About()
+    {
+        Debug.Log("About!");
+        SceneManager.LoadScene(3);
+        
+    }
+
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     
